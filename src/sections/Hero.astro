@@ -1,0 +1,59 @@
+---
+import Social from '../components/Social.astro'
+
+---
+<section class="hero">
+  <div class="triangle"></div>
+  <div class="content container flex flex-col gap-4">
+    <h1 class="name text-step4 flex flex-col font-extrabold leading-none">
+      <small class="text-step2 font-normal">Hola, mi nombre es</small>
+      <span>Nestor Rojas</span>
+    </h1>
+    <Social />
+    <button class="bg-third text-primary rounded-md px-4 py-2 font-bold inline-block w-fit">
+      Descargar mi curriculum
+    </button>
+  </div>
+</section>
+
+<style>
+  .hero {
+    width: 100%;
+    height: 100dvh;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40%;
+    background-color: var(--color-primary);
+    height: 100%;
+    z-index: -5;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60%;
+    background-color: var(--color-third);
+    height: 100%;
+    z-index: -10;
+  }
+  .triangle {
+    width: 200px;
+    height: 100dvh;
+    position: absolute;
+    left: 40%;
+    right: 0;
+    border-top: 50dvh solid transparent;
+    border-bottom: 50dvh solid transparent;
+    border-left: calc(100vw * 0.30) solid var(--color-primary);
+    z-index: -5;
+  }
+</style>

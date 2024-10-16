@@ -1,0 +1,67 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  :root {
+    --color-primary: #010522;
+    --color-primary-light: #c5cae9;
+    --color-secondary: #3f51b5;
+    --color-third: #00bcd4;
+    --color-black: #212121;
+    --color-white: #ffffff;
+    --color-gray: #757575;
+    --color-gray-light: #bdbdbd;
+
+    --step--2: clamp(0.78rem, calc(0.77rem + 0.03vw), 0.8rem);
+    --step--1: clamp(0.94rem, calc(0.92rem + 0.11vw), 1rem);
+    --step-0: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    --step-1: clamp(1.35rem, calc(1.28rem + 0.37vw), 1.56rem);
+    --step-2: clamp(1.62rem, calc(1.5rem + 0.58vw), 1.95rem);
+    --step-3: clamp(1.94rem, calc(1.77rem + 0.87vw), 2.44rem);
+    --step-4: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+    --step-5: clamp(2.8rem, calc(2.45rem + 1.77vw), 3.82rem);
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: var(--color-primary);
+    color: var(--color-white);
+    box-sizing: inherit;
+  }
+
+  
+  @tailwind components;
+  @layer components {
+    .container {
+      max-width: 1280px;
+      margin-inline: auto;
+			padding-inline: 20px;
+    }
+		.btn-primary {
+			@apply bg-third text-white rounded-md px-4 py-2 font-bold inline-block w-fit;
+		}
+  }
+</style>
