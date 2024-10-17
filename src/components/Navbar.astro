@@ -1,9 +1,86 @@
-<nav class="hero">
-  <h2>Navbar</h2>
-</nav>
+---
+import IconHamburguer from "../icons/IconHamburguer.astro";
+---
+
+<header
+  class="hero fixed top-0 z-20 w-full flex gap-2 justify-between items-center px-5 h-12 backdrop-blur-md "
+>
+  <div
+    class="logo text-step1 font-extrabold text-third h-full flex items-center"
+  >
+    Nirojas1
+  </div>
+
+  <nav class="nav">
+    <ul
+      class="absolute left-0 top-12 flex flex-col justify-start items-start w-screen -translate-x-full
+      md:static md:translate-y-0 md:flex-row md:justify-end md:w-fit md:translate-x-0 md:!bg-transparent"
+    >
+      <li class="w-full md:w-fit">
+        <a class="inline-block px-6 w-full md:w-fit md:px-4 py-4 hover:bg-secondary transition-all duration-300" href="#"
+          >Inicio</a>
+      </li>
+      <li class="w-full md:w-fit">
+        <a class="inline-block px-6 w-full md:w-fit md:px-4 py-4 hover:bg-secondary transition-all duration-300" href="#"
+          >Sobre mi</a>
+      </li>
+      <li class="w-full md:w-fit">
+        <a class="inline-block px-6 w-full md:w-fit md:px-4 py-4 hover:bg-secondary transition-all duration-300" href="#"
+          >Proyectos</a>
+      </li>
+      <li class="w-full md:w-fit">
+        <a class="inline-block px-6 w-full md:w-fit md:px-4 py-4 hover:bg-secondary transition-all duration-300" href="#"
+          >Contacto</a>
+      </li>
+    </ul>
+    <div class="hamburguer block md:hidden">
+      <IconHamburguer />
+    </div>
+  </nav>
+</header>
+
+<script>
+  const btnHamburguer = document.querySelector(".hamburguer");
+  const listNav = document.querySelector("ul");
+
+  btnHamburguer?.addEventListener("click", () => {
+    listNav?.classList.toggle("active");
+  });
+</script>
 
 <style>
   nav {
-    display:none;
+    z-index: 20;
   }
+  ul {
+    background: var(--color-primary-light);
+    transition: transform 0.3s ease-in-out;
+  }
+  ul.active {
+    transform: translateX(0);
+  }
+  /* ul {
+  }
+  ul.active {
+    border-top: 1px solid var(--color-gray-light);
+    animation: dropdownMenu 1s ease-in-out both;    
+
+    & li{
+      width: 100%;      
+      border-bottom: 1px solid var(--color-gray-light);      
+    }
+  }
+
+  @keyframes dropdownMenu {
+    0% {
+      opacity: 0;
+    }
+    70%{
+      opacity: .1;
+    }
+    100% {
+      opacity: 1;      
+      transform: translateY(3rem);
+    }    
+  } */
 </style>

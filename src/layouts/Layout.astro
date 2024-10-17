@@ -15,6 +15,12 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <slot />
@@ -23,8 +29,8 @@ const { title } = Astro.props;
 <style is:global>
   :root {
     --color-primary: #010522;
-    --color-primary-light: #c5cae9;
-    --color-secondary: #3f51b5;
+    --color-primary-light: #0c155d;
+    --color-secondary: #1a33c2;
     --color-third: #00bcd4;
     --color-black: #212121;
     --color-white: #ffffff;
@@ -46,22 +52,21 @@ const { title } = Astro.props;
     box-sizing: border-box;
   }
   html {
-    font-family: system-ui, sans-serif;
+    font-family: "Poppins", system-ui, sans-serif;
     background: var(--color-primary);
     color: var(--color-white);
     box-sizing: inherit;
   }
 
-  
   @tailwind components;
   @layer components {
     .container {
       max-width: 1280px;
       margin-inline: auto;
-			padding-inline: 20px;
+      padding-inline: 20px;
     }
-		.btn-primary {
-			@apply bg-third text-white rounded-md px-4 py-2 font-bold inline-block w-fit;
-		}
+    .btn-primary {
+      @apply bg-third text-white rounded-md px-4 py-2 font-bold inline-block w-fit;
+    }
   }
 </style>
