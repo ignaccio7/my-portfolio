@@ -1,0 +1,92 @@
+---
+import Section from "../components/Section.astro";
+import Title from "../components/Title.astro";
+import TagProject from "../components/TagProject.astro";
+import IconHTML from "../icons/IconHTML.astro";
+import IconGoTo from "../icons/IconGoTo.astro";
+
+const projects = [
+  {
+    id: 1,
+    title: "Sitio 1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, placeat obcaecati? Odio reiciendis sed magnam beatae, consequuntur eos ut sint tempore dolorum architecto magni ullam nemo quod quos autem aliquid.",
+    url: "https://ignaccio7.github.io/20ProyectosHTMLCSS/ecommerce/",
+    image: "/public/projects/sitio1.png",
+    tag:IconHTML,
+  },
+  {
+    id: 2,
+    title: "Sitio 2",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, placeat obcaecati? Odio reiciendis sed magnam beatae, consequuntur eos ut sint tempore dolorum architecto magni ullam nemo quod quos autem aliquid.",
+    url: "https://ignaccio7.github.io/20ProyectosHTMLCSS/Cafeteria/",
+    image: "/public/projects/sitio2.png",
+    tag:IconHTML,
+  },
+  {
+    id: 3,
+    title: "Sitio 3",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, placeat obcaecati? Odio reiciendis sed magnam beatae, consequuntur eos ut sint tempore dolorum architecto magni ullam nemo quod quos autem aliquid.",
+    url: "https://ignaccio7.github.io/20ProyectosHTMLCSS/Nucleus/",
+    image: "/public/projects/sitio3.png",
+    tag:IconHTML,
+  },
+  {
+    id: 4,
+    title: "Sitio 4",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, placeat obcaecati? Odio reiciendis sed magnam beatae, consequuntur eos ut sint tempore dolorum architecto magni ullam nemo quod quos autem aliquid.",
+    url: "https://ignaccio7.github.io/20ProyectosHTMLCSS/TECHPRO-SitioParaAudifonos/",
+    image: "/public/projects/sitio4.png",
+    tag:IconHTML,
+  },
+  {
+    id: 5,
+    title: "Sitio 5",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, placeat obcaecati? Odio reiciendis sed magnam beatae, consequuntur eos ut sint tempore dolorum architecto magni ullam nemo quod quos autem aliquid.",
+    url: "https://ignaccio7.github.io/20ProyectosHTMLCSS/Architecture-SitioDeArquitectura/",
+    image: "/public/projects/sitio5.png",
+    tag:IconHTML,
+  },
+];
+---
+
+<Section name="projects">
+  <Title content="Mis" emphasis="proyectos" />
+  <div
+    class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+  >
+    {
+      projects.map((project) => {
+        return (
+          <div class="project overflow-hidden rounded-md shadow-xl relative group">
+            <img src={project.image} alt={project.title} />
+
+            <article class="absolute inset-0 flex flex-col gap-2 items-center justify-center bg-gradient-to-tr from-third to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+              <h3 class="text-step1 font-extrabold text-white">
+                {project.title}
+              </h3>
+              <p class="line-clamp-3 text-center text-step01">
+                {project.description}
+              </p>
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconGoTo class="size-8 bg-white text-black rounded-full" />
+              </a>
+            </article>
+
+            <TagProject class="group-hover:opacity-0 transition-opacity duration-300 ease">
+              <project.tag class="size-10" />
+            </TagProject>
+          </div>
+        );
+      })
+    }
+  </div>
+</Section>

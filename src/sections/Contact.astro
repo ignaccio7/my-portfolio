@@ -1,0 +1,54 @@
+---
+import Section from "../components/Section.astro";
+import Title from "../components/Title.astro";
+---
+
+<Section name="contact">
+  <Title content="Contactame" emphasis="🤙" />
+  <form
+    action=""
+    class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full"
+  >
+    <label for="nombre" class="col-span-1">
+      <input
+        class="max-w-80 w-[320px] p-2 border-b-2 border-gray text-white bg-transparent"
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Nombre Completo"
+      />
+    </label>
+
+    <label for="phone" class="col-span-1">
+      <input
+        class="max-w-80 w-[320px] p-2 border-b-2 border-gray text-white bg-transparent"
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Telefono movil"
+      />
+    </label>
+
+    <label for="email" class="w-full md:col-span-2">
+      <input
+        class="w-full p-2 border-b-2 border-gray text-white bg-transparent"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Correo Electronico"
+      />
+    </label>
+    <label for="message" class="w-full md:col-span-2">
+      <textarea 
+        class="w-full bg-transparent p-2 text-white border-2 border-gray resize-none" 
+        id="message" 
+        name="message" 
+        placeholder="Mensaje"
+        rows="10"        
+      ></textarea>
+    </label>
+    <button class="btn-primary w-full md:col-span-2 mx-auto uppercase">
+      Enviar
+    </button>
+  </form>
+</Section>

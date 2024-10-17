@@ -17,6 +17,7 @@ export default {
         grayLight: 'var(--color-gray-light)'
       },
       fontSize: {
+        step01: "var(--step--1)",
         step0: "var(--step-0)",
         step1: "var(--step-1)",
         step2: "var(--step-2)",

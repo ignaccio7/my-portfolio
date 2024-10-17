@@ -1,29 +1,33 @@
 ---
-import IconLinkedIn from "../icons/IconLinkedIn.astro";
+import Section from "../components/Section.astro";
+import Title from "../components/Title.astro";
 
+import IconHTML from "../icons/IconHTML.astro";
+import IconReact from "../icons/IconReact.astro";
+import IconNext from "../icons/IconNext.astro";
 
 ---
 
-<section class="services container w-full">
-  <h2 class="text-step4 font-bold text-center mb-4">Mis <small class="text-step4 text-third">servicios</small></h2>
+<Section name="services">
+  <Title content="Mis" emphasis="servicios" />
   <div class="cards grid grid-cols-1 md:grid-cols-3 gap-6">
     <div class="card w-full p-6 flex flex-col gap-4 items-center border-t-4 border-b-4 border-third rounded-xl shadow-xl">
-      <IconLinkedIn />
+      <IconHTML class="size-28" />
       <h3 class="text-step2 font-semibold">Sitios Estaticos</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, suscipit! Voluptates, illum voluptatibus numquam placeat ad mollitia excepturi deleniti labore? Voluptatum repellat suscipit exercitationem quos molestias magnam est dolorum nesciunt.</p>
+      <p class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, suscipit! Voluptates, illum voluptatibus numquam placeat ad mollitia excepturi deleniti labore? Voluptatum repellat suscipit exercitationem quos molestias magnam est dolorum nesciunt.</p>
       <button class="btn-primary">Ir a ver mas</button>
     </div>
     <div class="card w-full p-6 flex flex-col gap-4 items-center border-t-4 border-b-4 border-third rounded-xl shadow-xl">
-      <IconLinkedIn />
-      <h3>Aplicaciones de una pagina</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, suscipit! Voluptates, illum voluptatibus numquam placeat ad mollitia excepturi deleniti labore? Voluptatum repellat suscipit exercitationem quos molestias magnam est dolorum nesciunt.</p>
-      <button>Ir a ver mas</button>
+      <IconReact class="size-28" />
+      <h3 class="text-step2 font-semibold">Sitios Estaticos</h3>
+      <p class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, suscipit! Voluptates, illum voluptatibus numquam placeat ad mollitia excepturi deleniti labore? Voluptatum repellat suscipit exercitationem quos molestias magnam est dolorum nesciunt.</p>
+      <button class="btn-primary">Ir a ver mas</button>
     </div>
     <div class="card w-full p-6 flex flex-col gap-4 items-center border-t-4 border-b-4 border-third rounded-xl shadow-xl">
-      <IconLinkedIn />
-      <h3>Sitios Completos</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, suscipit! Voluptates, illum voluptatibus numquam placeat ad mollitia excepturi deleniti labore? Voluptatum repellat suscipit exercitationem quos molestias magnam est dolorum nesciunt.</p>
-      <button>Ir a ver mas</button>
+      <IconNext class="size-28" />
+      <h3 class="text-step2 font-semibold">Sitios Estaticos</h3>
+      <p class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, suscipit! Voluptates, illum voluptatibus numquam placeat ad mollitia excepturi deleniti labore? Voluptatum repellat suscipit exercitationem quos molestias magnam est dolorum nesciunt.</p>
+      <button class="btn-primary">Ir a ver mas</button>
     </div>
   </div>
-</section>
+</Section>

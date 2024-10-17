@@ -1,0 +1,16 @@
+---
+interface Props {
+  content: string;
+  emphasis: string;
+  class?: string;
+}
+
+const { content, emphasis, class: className = "" } = Astro.props;
+---
+
+<h2 class={`text-step4 font-bold text-center mb-4 ${className}`}>
+  {content}
+  <small class="text-step4 text-third">
+    {emphasis}
+  </small>
+</h2>

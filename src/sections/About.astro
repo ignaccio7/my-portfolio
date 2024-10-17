@@ -1,4 +1,10 @@
-<section class="about container w-full h-dvh flex items-center">
+---
+import Section from '../components/Section.astro'
+import Title from "../components/Title.astro"
+
+---
+
+<Section name="about">
   <div class="profile w-full flex gap-6 items-start flex-wrap">
     <img
       class="max-w-xl h-auto rounded-xl w-full order-2 md:-order-1 block mx-auto"
@@ -6,10 +12,7 @@
       alt="Imagen de Perfil"
     />
     <div class="content flex flex-col gap-4 basis-80 flex-1 flex-shrink-0">
-      <h2 class="text-step4 font-bold">
-        Acerca de
-        <small class="text-step4 text-third">mi</small>
-      </h2>
+      <Title content="Acerca de" emphasis="mi" class="!text-left" />      
       <p class="text-step0 leading-tight text-pretty">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vitae
         blanditiis non nostrum explicabo nam error molestias mollitia labore
@@ -19,4 +22,4 @@
       <button class="btn-primary">Leer más...</button>
     </div>
   </div>
-</section>
+</Section>
