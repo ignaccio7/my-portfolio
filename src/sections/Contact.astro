@@ -6,8 +6,10 @@ import Title from "../components/Title.astro";
 <Section name="contact">
   <Title content="Contactame" emphasis="🤙" />
   <form
-    action=""
+    action="https://formsubmit.co/nestorignaciorg@gmail.com"
+    method="POST"
     class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full"
+    target="_blank"
   >
     <label for="nombre" class="col-span-1">
       <input
@@ -16,6 +18,7 @@ import Title from "../components/Title.astro";
         id="nombre"
         name="nombre"
         placeholder="Nombre Completo"
+        required
       />
     </label>
 
@@ -36,16 +39,17 @@ import Title from "../components/Title.astro";
         id="email"
         name="email"
         placeholder="Correo Electronico"
+        required
       />
     </label>
     <label for="message" class="w-full md:col-span-2">
-      <textarea 
-        class="w-full bg-transparent p-2 text-white border-2 border-gray resize-none rounded-sm" 
-        id="message" 
-        name="message" 
+      <textarea
+        class="w-full bg-transparent p-2 text-white border-2 border-gray resize-none rounded-sm"
+        required
+        id="message"
+        name="message"
         placeholder="Mensaje"
-        rows="10"        
-      ></textarea>
+        rows="10"></textarea>
     </label>
     <button class="btn-primary md:col-span-2 mx-auto uppercase !w-[250px]">
       Enviar
