@@ -3,7 +3,7 @@ import IconHamburguer from "../icons/IconHamburguer.astro";
 ---
 
 <header
-  class="hero fixed top-0 z-20 w-full flex gap-2 justify-between items-center px-5 h-12 backdrop-blur-md "
+  class="hero fixed top-0 z-20 w-full flex gap-2 justify-between items-center px-5 h-12 "
 >
   <div
     class="logo text-step1 font-extrabold text-third h-full flex items-center"
@@ -53,6 +53,12 @@ import IconHamburguer from "../icons/IconHamburguer.astro";
 </script>
 
 <style>
+  header {
+    animation: enhance_header linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 300px;
+  }
+
   nav {
     z-index: 20;
   }
@@ -62,6 +68,12 @@ import IconHamburguer from "../icons/IconHamburguer.astro";
   }
   ul.active {
     transform: translateX(0);
+  }
+
+  @keyframes enhance_header {
+    to {      
+      backdrop-filter: blur(20px);
+    }
   }
   /* ul {
   }

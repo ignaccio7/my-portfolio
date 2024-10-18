@@ -14,3 +14,11 @@ const { content, emphasis, class: className = "" } = Astro.props;
     {emphasis}
   </small>
 </h2>
+
+<style>
+  h2 {
+    animation: entry-top linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 50%;    
+  }
+</style>

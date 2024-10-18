@@ -40,15 +40,23 @@ import Title from "../components/Title.astro";
     </label>
     <label for="message" class="w-full md:col-span-2">
       <textarea 
-        class="w-full bg-transparent p-2 text-white border-2 border-gray resize-none" 
+        class="w-full bg-transparent p-2 text-white border-2 border-gray resize-none rounded-sm" 
         id="message" 
         name="message" 
         placeholder="Mensaje"
         rows="10"        
       ></textarea>
     </label>
-    <button class="btn-primary w-full md:col-span-2 mx-auto uppercase">
+    <button class="btn-primary md:col-span-2 mx-auto uppercase !w-[250px]">
       Enviar
     </button>
   </form>
 </Section>
+
+<style>
+  form {
+    animation: entry linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 50%;
+  }
+</style>

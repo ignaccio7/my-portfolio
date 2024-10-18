@@ -54,7 +54,7 @@ const projects = [
 ];
 ---
 
-<Section name="projects">
+<Section name="projects" class="mt-12 md:mt-0">
   <Title content="Mis" emphasis="proyectos" />
   <div
     class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -90,3 +90,11 @@ const projects = [
     }
   </div>
 </Section>
+
+<style>
+  div.project {
+    animation: entry-bottom linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+  }
+</style>

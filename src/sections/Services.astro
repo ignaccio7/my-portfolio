@@ -10,24 +10,32 @@ import IconNext from "../icons/IconNext.astro";
 
 <Section name="services">
   <Title content="Mis" emphasis="servicios" />
-  <div class="cards grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div class="card w-full p-6 flex flex-col gap-4 items-center border-t-4 border-b-4 border-third rounded-xl shadow-xl">
+  <div class="cards grid grid-cols-1 md:grid-cols-3 gap-6 ">
+    <div class="card w-full p-6 flex flex-col gap-4 items-center justify-around border-t-4 border-b-4 border-third rounded-xl shadow-xl">
       <IconHTML class="size-28" />
-      <h3 class="text-step2 font-semibold">Sitios Estaticos</h3>
-      <p class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, suscipit! Voluptates, illum voluptatibus numquam placeat ad mollitia excepturi deleniti labore? Voluptatum repellat suscipit exercitationem quos molestias magnam est dolorum nesciunt.</p>
-      <button class="btn-primary">Ir a ver mas</button>
+      <h3 class="text-step2 font-semibold">Sitios Web Estáticos</h3>
+      <p class="line-clamp-6">Desarrollo sitios web estáticos utilizando HTML, CSS, y JavaScript puro. Estos sitios ofrecen una experiencia rápida y ligera, ideales para proyectos con contenido fijo, como portafolios, blogs personales, y páginas informativas que no requieren de bases de datos o procesamiento en el servidor.</p>
+      <a href="#projects" class="btn-primary">Ir a ver mas</a>
     </div>
-    <div class="card w-full p-6 flex flex-col gap-4 items-center border-t-4 border-b-4 border-third rounded-xl shadow-xl">
+    <div class="card w-full p-6 flex flex-col gap-4 items-center justify-around border-t-4 border-b-4 border-third rounded-xl shadow-xl">
       <IconReact class="size-28" />
-      <h3 class="text-step2 font-semibold">Sitios Estaticos</h3>
-      <p class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, suscipit! Voluptates, illum voluptatibus numquam placeat ad mollitia excepturi deleniti labore? Voluptatum repellat suscipit exercitationem quos molestias magnam est dolorum nesciunt.</p>
-      <button class="btn-primary">Ir a ver mas</button>
+      <h3 class="text-step2 font-semibold">Aplicaciones Semidinámicas</h3>
+      <p class="line-clamp-6"> Creo aplicaciones web utilizando frameworks como React y Vue.js. Esto permite construir interfaces interactivas y reactivas que pueden interactuar con APIs para mostrar contenido dinámico. Son ideales para proyectos que requieren una experiencia de usuario más rica y actualizaciones en tiempo real, como paneles de control, tiendas en línea y aplicaciones SPA (Single Page Applications).</p>
+      <a href="#projects" class="btn-primary">Ir a ver mas</a>
     </div>
-    <div class="card w-full p-6 flex flex-col gap-4 items-center border-t-4 border-b-4 border-third rounded-xl shadow-xl">
+    <div class="card w-full p-6 flex flex-col gap-4 items-center justify-around border-t-4 border-b-4 border-third rounded-xl shadow-xl">
       <IconNext class="size-28" />
-      <h3 class="text-step2 font-semibold">Sitios Estaticos</h3>
-      <p class="line-clamp-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, suscipit! Voluptates, illum voluptatibus numquam placeat ad mollitia excepturi deleniti labore? Voluptatum repellat suscipit exercitationem quos molestias magnam est dolorum nesciunt.</p>
-      <button class="btn-primary">Ir a ver mas</button>
+      <h3 class="text-step2 font-semibold">Sistemas Web Complejos</h3>
+      <p class="line-clamp-6">Desarrollo sistemas más avanzados utilizando Next.js para un rendimiento óptimo en el frontend y Node.js en el backend, integrando bases de datos como PostgreSQL para la gestión eficiente de la información. Este enfoque es adecuado para aplicaciones web que requieren autenticación de usuarios, generación dinámica de contenido y escalabilidad, como plataformas de gestión de usuarios, sistemas de reservas y aplicaciones empresariales.</p>
+      <a href="#projects" class="btn-primary">Ir a ver mas</a>
     </div>
   </div>
 </Section>
+
+<style>
+  div.card {
+    animation: entry linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 50%;
+  }
+</style>

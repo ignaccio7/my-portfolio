@@ -13,13 +13,28 @@ import Title from "../components/Title.astro"
     />
     <div class="content flex flex-col gap-4 basis-80 flex-1 flex-shrink-0">
       <Title content="Acerca de" emphasis="mi" class="!text-left" />      
-      <p class="text-step0 leading-tight text-pretty">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vitae
-        blanditiis non nostrum explicabo nam error molestias mollitia labore
-        tempore accusamus pariatur numquam aliquid asperiores modi, corporis qui
-        cumque nobis.
+      <p class="text-step01 leading-tight text-pretty">
+        Me llamo Nestor Rojas. Actualmente estoy estudiando la carrera de <span class="text-third">Ingeniera de Sistemas</span> en la universidad de mi Ciudad. 
+        Me interesa y me apasiona mucho el desarrollo web y me gusta construir sitios web y aplicaciones web. 
+        También me gusta aprender nuevas tecnologías y me gusta compartir mi conocimiento con la comunidad.
+        Actualmente estoy en una pasantia en una facultad de mi universidad y estoy buscando un trabajo en el que pueda mejorar las habilidades aprendidas en mi carrera.
       </p>
-      <button class="btn-primary">Leer más...</button>
+      <!-- <button class="btn-primary">Leer más...</button> -->
     </div>
   </div>
 </Section>
+
+<style>
+
+  img {
+    animation: entry-left linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 50%;
+  }
+  p {
+    animation: entry-right linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 40%;
+  }
+
+</style>
