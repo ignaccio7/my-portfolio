@@ -67,7 +67,7 @@ const { title } = Astro.props;
       padding-inline: 20px;
     }
     .btn-primary {
-      @apply bg-third text-white rounded-md px-4 py-2 font-bold inline-block w-fit;
+      @apply bg-third text-white rounded-md px-4 py-2 font-bold inline-block w-fit hover:bg-secondary hover:text-white transition-all duration-500;
     }
   }
 
@@ -132,5 +132,5 @@ const { title } = Astro.props;
     to {
       opacity: 1;      
     }
-  }
+  } 
 </style>

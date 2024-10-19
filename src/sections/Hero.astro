@@ -2,8 +2,8 @@
 import Social from '../components/Social.astro'
 
 ---
-<section class="hero">
-  <div class="triangle"></div>
+<section class="hero relative overflow-hidden">
+  <div class="triangle"></div>  
   <div class="content container flex flex-col gap-4">
     <h1 class="name text-step4 flex flex-col font-extrabold leading-none">
       <small class="text-step2 font-normal">Hola, mi nombre es</small>
@@ -14,10 +14,14 @@ import Social from '../components/Social.astro'
       href="https://drive.google.com/file/d/14GO20o0DCBwz397RKIjNtrzHiKorvtAZ/view?usp=drive_link" 
       target="_blank"
       rel="noopener noreferrer"
-      class="bg-third text-primary rounded-md px-4 py-2 font-bold inline-block w-fit">
+      class="bg-third text-primary rounded-md px-4 py-2 font-bold inline-block w-fit hover:bg-secondary hover:text-white transition-all duration-500">
       Curriculum
     <a/>
-  </div>
+    <img 
+    src="https://github.com/ignaccio7/my-portfolio/blob/master/public/mepixel.png?raw=true" 
+    alt="Mepixel" 
+    class="w-full max-w-[300px] m-auto absolute inset-0 translate-x-[350px]" />  
+  </div>  
 </section>
 
 <style>
@@ -60,4 +64,61 @@ import Social from '../components/Social.astro'
     border-left: calc(100vw * 0.30) solid var(--color-primary);
     z-index: -5;
   }
+
+  /* Animation in the name */
+  span{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 10ch;
+    animation: meca 3s steps(10, end) infinite alternate, border-blink 1.5s infinite alternate;
+    border-right: 2px solid var(--color-white);
+  }
+
+  @keyframes meca {
+    0% {
+      width: 0ch;
+    }
+    30% {
+      width: 0ch; /* Oculta el texto */
+    }
+    50% {
+      width: 10ch; /* Muestra el texto */
+    }
+    100% {
+      width: 10ch; /* Mantiene el texto visible */
+    }
+  }
+
+  /* span::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--color-white);
+    animation: cursor-blink 1.5s infinite both;
+  } */
+
+  @keyframes border-blink {
+    50% {
+      border-right: transparent;
+    }
+  }
+
+  @keyframes cursor-blink {
+    0% {
+      scale: 0;
+    }
+
+    50% {
+      scale: 1;      
+    }
+
+    100% {
+      scale: 0;
+    }
+  }
+
 </style>
